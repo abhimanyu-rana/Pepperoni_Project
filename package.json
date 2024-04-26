@@ -1,0 +1,36 @@
+{
+  "name": "pupperoni-front",
+  "version": "1.0.0",
+  "description": "Pupperoni Frontend",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.1",
+    "socket.io": "^4.5.2",
+    "sweetalert2": "^11.4.37"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATeamDeakin/Pupperoni-Front.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "Express"
+  ],
+  "author": "Aya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ATeamDeakin/Pupperoni-Front/issues"
+  },
+  "homepage": "https://github.com/ATeamDeakin/Pupperoni-Front#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

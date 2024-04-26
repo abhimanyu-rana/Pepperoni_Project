@@ -1,0 +1,14 @@
+{
+    "firstName":"Akshat", //string
+    "local":"Dockdiving, Fetch, Swimming", //not sure, string?
+    "availability":" 
+    {
+        {0,1,0,0,0,1,0},
+        {0,1,0,0,0,1,0},
+        {0,1,0,0,0,1,0}
+    }", //7x3 array
+    "suburb":"Box Hill", //string
+    "phone":"0410234195",  //string
+    "transport":"1", //int
+    "dogsNames":{"Mr.Tutu"} //array
+}

@@ -1,0 +1,19 @@
+{
+    "dogname":"Mr. Tutu", //string
+    "age":"0", //int
+    "size":"0", //int
+    "people":"5", //int
+    "dog":"5", //int
+    "prey":"5", //int
+    "training":"1", //int
+    "personality":
+    {
+        "trait1":"Energetic", //string
+        "traint2":"Shy", //string
+        "trait3":"Curious" //string
+    },
+    "breed":"Chihuahua", //string
+    "other":"Mr.Tutu barks a lot 
+    but he's just a little scared, 
+    he means no harm!" //string
+}

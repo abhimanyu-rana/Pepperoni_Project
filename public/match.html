@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, intial-scale=1" />
+	<!--Title-->
+	<title>Pupperoni - Match</title>
+	<meta name="description" content="Match interface for Pupperoni" />
+	<meta name="author" content="Aya" />
+
+	<meta property="og:title" content="Pupperoni - Match" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Matching interface for Pupperoni" />
+
+	<!-- CSS resources -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<!-- Custom Style Sheet-->
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+	<!--NavBar-->
+
+	<ul id="slide-out" class="sidenav">
+		<li>
+			<div class="background">
+				<img src="images/pupperoni.jpg" width="300" />
+			</div>
+			<div class="center-align">
+				<h5>Pupperoni</h5>
+			</div>
+			<div class="divider"></div>
+		</li>
+
+		<li>
+			<a href="/match.html"><i class="material-icons">pets</i>Match</a>
+		</li>
+		<li>
+			<a href="/friends.html"><i class="material-icons">groups</i>Your Packmates</a>
+		</li>
+		<li>
+			<a href="/logout.html" onclick="logout()"><i class="material-icons">logout</i>Log Out</a>
+		</li>
+	</ul>
+
+	<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"
+			style="background-color:#f0b95f;font-size:32px; margin:16px;">menu</i></a>
+	<!--Content-->
+	<div class="center-align">
+		<h2>Pupperoni - Match</h2>
+		<br>
+	</div>
+	<div class="container" id="dogsavail">
+		<div class="row">
+
+			<!--Owner Card Static-->
+			<div class="col s4" class="center-align" id="owner">
+				<div id="matchowner" class="card panel owner">
+					<h5 id="firstName">Akshat</h5>
+					<div class="divider"></div>
+
+					<div class="section" class="textbox">
+						<h6>Local Activities</h6>
+						<div id="local">Dock diving, Swimming, Fetch</div>
+					</div>
+					<div>
+						<h6>Availability</h6>
+						<div>
+
+							<img id="MonMor" class="avail" src="images/icon-mor-enabled.png" />
+							<img id="TueMor" class="avail" src="images/icon-mor-disabled.png" />
+							<img id="WedMor" class="avail" src="images/icon-mor-disabled.png" />
+							<img id="ThuMor" class="avail" src="images/icon-mor-enabled.png" />
+							<img id="FriMor" class="avail" src="images/icon-mor-disabled.png" />
+							<img id="SatMor" class="avail" src="images/icon-mor-disabled.png" />
+							<img id="SunMor" class="avail" src="images/icon-mor-disabled.png" />
+						</div>
+						<div>
+							<img id="MonDay" class="avail" src="images/icon-day-disabled.png" />
+							<img id="TueDay" class="avail" src="images/icon-day-disabled.png" />
+							<img id="WedDay" class="avail" src="images/icon-day-disabled.png" />
+							<img id="ThuDay" class="avail" src="images/icon-day-enabled.png" />
+							<img id="FriDay" class="avail" src="images/icon-day-disabled.png" />
+							<img id="SatDay" class="avail" src="images/icon-day-disabled.png" />
+							<img id="SunDay" class="avail" src="images/icon-day-disabled.png" />
+						</div>
+						<div>
+							<img id="MonEve" class="avail" src="images/icon-eve-disabled.png" />
+							<img id="TueEve" class="avail" src="images/icon-eve-enabled.png" />
+							<img id="WedEve" class="avail" src="images/icon-eve-disabled.png" />
+							<img id="ThuEve" class="avail" src="images/icon-eve-disabled.png" />
+							<img id="FriEve" class="avail" src="images/icon-eve-disabled.png" />
+							<img id="SatEve" class="avail" src="images/icon-eve-enabled.png" />
+							<img id="SunEve" class="avail" src="images/icon-eve-disabled.png" />
+						</div>
+					</div>
+					<h6>Other Info</h6>
+					<ul>
+						<li id="suburb">Box Hill</li>
+						<li id="transport">Has Public Transport</li>
+						<li id="dognames">Dogs: Mr Tutu</li>
+					</ul>
+					<br />
+				</div>
+				<br />
+			</div>
+
+			<div class="col s4">
+				<div class="card panel">
+
+					<img class="dogpic" src="images/mr-tutu.jpg" />
+					<div class="divider"></div>
+					<div class="center-align">
+						<a class="btn-large"><i class="large material-icons" style="color:#FFFFFF;">arrow_back</i></a>
+						<a class="btn-large reject" onclick="next()"><i class="large material-icons"
+								style="color:#FFFFFF">close</i></a>
+						<a class="btn-large accept" onclick="next()"><i class="large material-icons"
+								style="color:#FFFFFF">check</i></a>
+						<a class="btn-large"><i class="large material-icons"
+								style="color:#FFFFFF;">arrow_forward</i></a>
+					</div>
+				</div>
+			</div>
+
+			<!--dog menu-->
+			<div class="col s4" id="dog">
+				<div class="card panel dog" style="text-align:center;">
+					<h5 id="dogName">Mr Tutu</h5>
+					<div class="divider"></div>
+					<div class="row">
+						<div class="col s6">
+							<h6>Age</h6>
+							<div class="rounded close" id="age">Puppy</div>
+						</div>
+						<div class="col s6">
+							<h6>Size</h6>
+							<div id="size" class="rounded perfect">Small</div>
+						</div>
+						<div class="col s6">
+							<h6>People Friendly</h6>
+							<div id="" class="rounded perfect">5/5</div>
+						</div>
+						<div class="col s6">
+							<h6>Dog Friendly</h6>
+							<div id="" class="rounded far">2/5 </div>
+						</div>
+						<div class="col s6">
+							<h6>Prey Drive</h6>
+							<div id="" class="rounded perfect">None </div>
+						</div>
+						<div class="col s6">
+							<h6>Training</h6>
+							<div id="" class="rounded close">Puppy School </div>
+						</div>
+					</div>
+
+					<div>
+						<h6>Personality</h6>Energetic, Shy, Curious
+					</div>
+
+					<div>
+						<h6>Breed</h6> Chihuahua
+					</div>
+					<div>
+						<h6>Other</h6>
+					</div>
+					Mr.Tutu barks a lot but he's just a little scared, he means no harm!
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!--Footer-->
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Pupperoni</h5>
+					<p class="grey-text text-lighten-4">
+						Thank you for using our website for your dog socialisation needs.
+						Here's a quick site map to help you navigate easier
+					</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li>
+							<a class="grey-text text-lighten-3" href="/index.html">Match</a>
+						</li>
+						<li>
+							<a class="grey-text text-lighten-3" href="/friends.html">Packmates</a>
+						</li>
+						<li>
+							<a class="grey-text text-lighten-3" href="/settings.html">Settings</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2022 A-Team Deakin
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<!-- socket IO Served by the server -->
+	<script src="/socket.io/socket.io.js"></script>
+
+	<script>
+	</script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

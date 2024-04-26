@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, intial-scale=1" />
+	<!--Title-->
+	<title>Pupperoni - Match</title>
+	<meta name="description" content="Match interface for Pupperoni" />
+	<meta name="author" content="Aya" />
+
+	<meta property="og:title" content="Pupperoni Login" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Matching interface for Pupperoni" />
+
+	<!-- CSS resources -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<!-- Custom Style Sheet-->
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+	<!--NavBar-->
+
+	<div class="center-align">
+		<h2>Pupperoni</h2>
+		<br />
+	</div>
+	<br />
+	<div class="center-align">
+		<img src="images/pupperoni.jpg" width="300">
+		<h5>Welcome back!</h5>
+		<br>
+		<div class="signin">
+			<input placeholder="email" id="username" type="text" class="validate" />
+			<input placeholder="Password" id="password" type="text" class="validate" />
+		</div>
+		<br>
+		<a class="btn" onclick="login()">Log In</a>
+	</div>
+	<br />
+	<br />
+	<br />
+	<!--Footer-->
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Pupperoni</h5>
+					<p class="grey-text text-lighten-4">
+						Thank you for using our website for your dog socialisation needs.
+						Here's a quick site map to help you navigate easier
+					</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li>
+							<a class="grey-text text-lighten-3" href="/index.html">Match</a>
+						</li>
+						<li>
+							<a class="grey-text text-lighten-3" href="/friends.html">Packmates</a>
+						</li>
+						<li>
+							<a class="grey-text text-lighten-3" href="/settings.html">Settings</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2022 A-Team Deakin
+			</div>
+	</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+
+	<!-- socket IO Served by the server -->
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
